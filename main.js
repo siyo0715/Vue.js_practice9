@@ -6,6 +6,7 @@ new Vue({
         y:0
     },
     methods: {
+        // 掛け算(2倍)
         countUp: function (Hangs) {
             this.number += 1 * Hangs
         },
