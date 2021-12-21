@@ -11,7 +11,7 @@
 <body>
     <div id="app">
         <p>現在{{ number }}回クリックされています</p>
-        <button v-on:click="countUp(2)" class="box">カウントアップ</button>
+        <button @click="countUp(2)" class="box">カウントアップ</button>
         <p v-on:mousemove="changeMousePosition(1.1,$event)" class="mouse">マウスを乗せてください
             <!-- イベント修飾子(どんなDOMでも利用可能) -->
             <span v-on:mousemove.stop class="mouse2">この茶色のゾーンだけ反応しない</span>
@@ -23,7 +23,7 @@
     </div>
     <div id="test">
         <p>現在{{ number }}回クリックされています</p>
-        <button v-on:[event]="countUp">カウントアップ</button>
+        <button @[event]="countUp">カウントアップ</button>
     </div>
 </body>
 <script src="main.js"></script>
