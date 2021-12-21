@@ -21,6 +21,10 @@
         <!-- キー修飾子（キーボード限定のDOMに対しての修飾子) -->
         <input type="text" v-on:keyup.enter="myAlert">
     </div>
+    <div id="test">
+        <p>現在{{ number }}回クリックされています</p>
+        <button v-on:[event]="countUp">カウントアップ</button>
+    </div>
 </body>
 <script src="main.js"></script>
 </html>

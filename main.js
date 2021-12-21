@@ -24,3 +24,16 @@ new Vue({
         }
     }
 })
+// イベントを使ってカウントアップ
+new Vue({
+    el: '#test',
+    data: {
+        number: 0,
+        event: 'click'
+    },
+    methods: {
+        countUp: function () {
+            this.number += 1;
+        }
+    }
+})
