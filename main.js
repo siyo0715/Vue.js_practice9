@@ -6,12 +6,21 @@ new Vue({
         y:0
     },
     methods: {
-        countUp: function () {
-            this.number += 1
+        countUp: function (Hangs) {
+            this.number += 1 * Hangs
         },
-        changeMousePosition: function (e) {
-            this.x = e.clientX;
-            this.y = e.clientY;
+        changeMousePosition: function (divideNumber, event) {
+            this.x = event.clientX / divideNumber;
+            this.y = event.clientY / divideNumber;
+        },
+        // イベント修飾子
+        noEvent: function (event) {
+            // hairskillのページを開けないようにする
+            // preventDefaultでデフォルトの動作を妨げる
+            event.preventDefault();
+        },
+        myAlert() {
+            alert('アラート!')
         }
     }
 })
